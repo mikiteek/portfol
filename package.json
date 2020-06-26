@@ -1,0 +1,33 @@
+{
+  "name": "portfol",
+  "version": "1.0.0",
+  "description": "Web site where you can publish your works, liks on pages you makeup",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "scss:build": "node-sass public/src/scss/styles.scss -o public",
+    "scss:watch": "node-sass --watch public/src/scss/styles.scss -o public",
+    "build-css": "npm run scss:build && npm run scss:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikiteek/portfol.git"
+  },
+  "author": "Mykyteiek Sergii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikiteek/portfol/issues"
+  },
+  "homepage": "https://github.com/mikiteek/portfol#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "handlebars": "^4.7.6",
+    "node-sass": "^4.14.1"
+  }
+}

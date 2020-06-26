@@ -1,0 +1,41 @@
+.wrapper {
+  background-color: $color-purpur;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.page-header {
+
+}
+.page-nav {
+  height: 90px;
+  @extend %df-beetween-center;
+}
+
+.page-logo {
+  @extend %link;
+  @include myfont-style($font-montserrat, 30px, 1.2, bold, #fff);
+}
+.site-nav {
+  @extend %df-beetween-center;
+  width: 620px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.site-nav__item {
+  @extend %list-item;
+}
+.site-nav__link {
+  @extend %link;
+  position: relative;
+  @include myfont-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
+  &:hover,
+  &:focus {
+    color: $color-beige;
+    -webkit-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+  }
+}
