@@ -3,6 +3,12 @@ const path = require("path");
 const exphbs = require("express-handlebars");
 const Handlebars = require('handlebars');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
+const homeRouts = require("./routes/home");
+const aboutRouts = require("./routes/about");
+const newsRouts = require("./routes/news");
+const projectsRouts = require("./routes/projects");
+const contactRouts = require("./routes/contact");
+const loginRouts = require("./routes/login");
 
 const app = express();
 
@@ -17,13 +23,13 @@ app.set("view engine", "hbs");
 app.set("views", "views");
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
-
-app.get("/about", (req, res) => {
-  res.render("about")
-});
+// routes registration
+app.use("/", homeRouts);
+app.use("/about", aboutRouts);
+app.use("/news", newsRouts);
+app.use("/projects", projectsRouts);
+app.use("/contact", contactRouts);
+app.use("/auth/login", loginRouts);
 
 
 

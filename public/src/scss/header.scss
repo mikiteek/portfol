@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: $color-purpur;
+  background-color: #f38181;
 }
 .container {
   width: 1200px;
@@ -33,7 +33,7 @@
   @include myfont-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
   &:hover,
   &:focus {
-    color: $color-beige;
+    color: #fce38a;
     -webkit-transition: color 0.2s linear;
     -o-transition: color 0.2s linear;
     transition: color 0.2s linear;
