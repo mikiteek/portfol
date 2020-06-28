@@ -1,0 +1,61 @@
+<h1>Add a new project</h1>
+
+<form action="/add" method="POST" class="add-form">
+  <div class="input-field">
+    <input
+        id="title"
+        name="title"
+        type="text"
+        class="validate add-form__input"
+        placeholder="Project's title" required
+    >
+<!--    <label for="title">Course name</label>-->
+    <span class="helper-text" data-error="Enter name"></span>
+  </div>
+  <div class="input-field">
+    <input
+        id="img"
+        name="img"
+        type="text"
+        class="validate add-form__input"
+        placeholder="Image's url" required
+    >
+<!--    <label for="img">Image's URL</label>-->
+    <span class="helper-text" data-error="Enter image's url"></span>
+  </div>
+
+  <div class="input-field">
+    <input
+        id="url-project"
+        name="url-project"
+        type="url"
+        class="validate add-form__input"
+        placeholder="URL yours project" required
+    >
+<!--    <label for="url-project">Project's url</label>-->
+    <span class="helper-text" data-error="Enter projects url"></span>
+  </div>
+  <div class="input-field">
+    <input
+        id="url-source"
+        name="url-source"
+        type="url"
+        class="validate add-form__input"
+        placeholder="Source code's URL" required
+    >
+<!--    <label for="url-source">Source's url</label>-->
+    <span class="helper-text" data-error="Enter source's url"></span>
+  </div>
+  <div class="input-field">
+    <textarea
+        id="description"
+        name="description"
+        class="validate add-form__input"
+        placeholder="Description yours project"
+        required
+    ></textarea>
+    <!--    <label for="description">Project's description</label>-->
+    <span class="helper-text" data-error="Enter description"></span>
+  </div>
+  <button class="btn btn-primary">Add project</button>
+</form>

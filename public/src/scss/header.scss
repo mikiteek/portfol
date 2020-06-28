@@ -2,7 +2,7 @@
   background-color: #f38181;
 }
 .container {
-  width: 1200px;
+  width: 970px;
   margin: 0 auto;
 }
 .page-header {
@@ -19,7 +19,7 @@
 }
 .site-nav {
   @extend %df-beetween-center;
-  width: 620px;
+  width: 600px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -30,7 +30,7 @@
 .site-nav__link {
   @extend %link;
   position: relative;
-  @include myfont-style($font-montserrat, 14px, 1.2, bold, #fff, uppercase);
+  @include myfont-style($font-montserrat, 14px, 1.2, 600, #fff, uppercase);
   &:hover,
   &:focus {
     color: #fce38a;

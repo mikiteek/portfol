@@ -4,11 +4,11 @@
   "description": "Web site where you can publish your works, liks on pages you makeup",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
     "scss:build": "node-sass public/src/scss/styles.scss -o public",
     "scss:watch": "node-sass --watch public/src/scss/styles.scss -o public",
-    "build-css": "npm run scss:build && npm run scss:watch"
+    "build-css": "npm run scss:build && npm run scss:watch",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",

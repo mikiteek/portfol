@@ -9,6 +9,8 @@ const newsRouts = require("./routes/news");
 const projectsRouts = require("./routes/projects");
 const contactRouts = require("./routes/contact");
 const loginRouts = require("./routes/login");
+const addRouts = require("./routes/add");
+
 
 const app = express();
 
@@ -22,6 +24,7 @@ app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
 app.set("views", "views");
 app.use(express.static("public"));
+app.use(express.urlencoded({extended: true}));
 
 // routes registration
 app.use("/", homeRouts);
@@ -30,6 +33,7 @@ app.use("/news", newsRouts);
 app.use("/projects", projectsRouts);
 app.use("/contact", contactRouts);
 app.use("/auth/login", loginRouts);
+app.use("/add", addRouts);
 
 
 
