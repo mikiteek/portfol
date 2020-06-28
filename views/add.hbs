@@ -3,6 +3,17 @@
 <form action="/add" method="POST" class="add-form">
   <div class="input-field">
     <input
+        id="author"
+        name="author"
+        type="text"
+        class="validate add-form__input"
+        placeholder="Your name" required
+    >
+    <!--    <label for="title">Course name</label>-->
+    <span class="helper-text" data-error="Enter name"></span>
+  </div>
+  <div class="input-field">
+    <input
         id="title"
         name="title"
         type="text"
@@ -14,8 +25,8 @@
   </div>
   <div class="input-field">
     <input
-        id="img"
-        name="img"
+        id="image"
+        name="image"
         type="text"
         class="validate add-form__input"
         placeholder="Image's url" required
@@ -26,8 +37,8 @@
 
   <div class="input-field">
     <input
-        id="url-project"
-        name="url-project"
+        id="linkPage"
+        name="linkPage"
         type="url"
         class="validate add-form__input"
         placeholder="URL yours project" required
@@ -37,8 +48,8 @@
   </div>
   <div class="input-field">
     <input
-        id="url-source"
-        name="url-source"
+        id="linkSource"
+        name="linkSource"
         type="url"
         class="validate add-form__input"
         placeholder="Source code's URL" required

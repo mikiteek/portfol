@@ -1,1 +1,19 @@
 <h1>Projects page</h1>
+{{#if projects.length}}
+  {{#each projects}}
+    <section class="section">
+      <h2 class="section__title">{{author}}</h2>
+      <div class="section__content">
+        <img src="{{image}}" alt="{{title}}" width="300" height="300" class="section__content--image">
+        <div class="section__info">
+          <h3 class="section__info--title">{{title}}</h3>
+          <p class="section__info--desc">{{description}}</p>
+          <a class="section__info--link" target="_blank" href="{{linkPage}}">Look on page</a>
+          <a class="section__info--link" target="_blank" href="{{linkSource}}">Look source files</a>
+        </div>
+      </div>
+    </section>
+  {{/each}}
+{{else}}
+  <p>Nothing projects</p>
+{{/if}}
