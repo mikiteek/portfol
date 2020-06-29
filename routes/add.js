@@ -10,9 +10,21 @@ router.get("/", (req, res) => {
 });
 
 router.post("/",async (req, res) => {
-  const project = new Project(req.body.title, req.body.image, req.body.description, req.body.linkPage, req.body.linkSource, req.body.author);
-  await project.save();
-  res.redirect("/projects");
+  const project = new Project({
+    title: req.body.title,
+    image: req.body.image,
+    description: req.body.description,
+    author: req.body.author,
+    linkPage: req.body.linkPage,
+    linkSource: req.body.linkSource,
+  });
+  try {
+    await project.save();
+    res.redirect("/projects");
+  }
+  catch (e) {
+    console.log(e);
+  }
 });
 
 

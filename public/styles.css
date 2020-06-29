@@ -112,3 +112,6 @@ img {
   .section__content--image:hover {
     transform: scale(1.2);
     transition: transform 0.4s linear; }
+
+.see-more {
+  padding-top: 30px; }

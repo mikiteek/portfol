@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const mongoose = require("mongoose");
 const exphbs = require("express-handlebars");
 const Handlebars = require('handlebars');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
@@ -10,7 +11,7 @@ const projectsRouts = require("./routes/projects");
 const contactRouts = require("./routes/contact");
 const loginRouts = require("./routes/login");
 const addRouts = require("./routes/add");
-
+const keys = require("./keys/index");
 
 const app = express();
 
@@ -43,6 +44,19 @@ app.use("/add", addRouts);
 
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, ()=> {
-  console.log(`Server is running on port ${PORT}`)
-})
+async function start() {
+  try {
+    await mongoose.connect(keys.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false
+    });
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  }
+  catch (e) {
+    console.log(e);
+  }
+}
+start();
