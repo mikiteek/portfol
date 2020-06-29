@@ -105,7 +105,8 @@ img {
   display: block; }
 
 .section__info {
-  padding-left: 50px; }
+  padding-left: 50px;
+  margin-right: auto; }
 
 .section__content--image {
   cursor: pointer; }

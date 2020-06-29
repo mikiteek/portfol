@@ -8,10 +8,24 @@
         <div class="section__info">
           <h3 class="section__info--title">{{title}}</h3>
           <p class="section__info--desc">{{description}}</p>
-          <a class="section__info--link" target="_blank" href="{{linkPage}}">Look on page</a>
-          <a class="section__info--link" target="_blank" href="{{linkSource}}">Look source files</a>
-          <a class="section__info--link see-more" target="_blank" href="/projects/{{id}}">See more</a>
+          <a class="section__info--link"
+              target="_blank" href="{{linkPage}}">
+            Look on page
+          </a>
+          <a class="section__info--link"
+             target="_blank" href="{{linkSource}}">
+            Look source files
+          </a>
+          <a
+              class="section__info--link see-more"
+              target="_blank" href="/projects/{{id}}">
+            See more
+          </a>
         </div>
+        <a class="section__info--link"
+           target="_blank" href="/projects/{{id}}/edit?allow=true">
+          Edit
+        </a>
       </div>
     </section>
   {{/each}}
